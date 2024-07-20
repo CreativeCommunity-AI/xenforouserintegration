@@ -1,5 +1,5 @@
 <?php
-namespace creativecommunityai\reativeCommunityAI\xenforouserintegration\controllers;
+namespace creativecommunityai\xenforouserintegration\controllers;
 
 use Craft;
 use craft\web\Controller;
