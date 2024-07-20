@@ -1,0 +1,28 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+    <h1>{{ "XenForo Login" | t }}</h1>
+
+    {% if craft.app.session.hasFlash('error') %}
+        <div class="error">{{ craft.app.session.getFlash('error') }}</div>
+    {% endif %}
+
+    <form method="post" action="{{ url('actions/xenforouserintegration/auth/login') }}">
+        {{ csrfInput() }}
+        {{ hiddenInput('redirect', craft.app.request.getQueryParam('redirect')) }}
+
+        <div class="field">
+            <label for="username">{{ "Username" | t }}</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="field">
+            <label for="password">{{ "Password" | t }}</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="btn submit">{{ "Login" | t }}</button>
+        </div>
+    </form>
+{% endblock %}

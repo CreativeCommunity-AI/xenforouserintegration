@@ -1,0 +1,11 @@
+{% extends "_layouts/cp" %}
+
+{% block content %}
+    {% if currentUser %}
+        <h1>{{ "Welcome, " ~ currentUser.username | t }}</h1>
+        <p>{{ "This is a members-only area." | t }}</p>
+    {% else %}
+        <p>{{ "You must be logged in to access this area." | t }}</p>
+        <a href="{{ url('login') }}">{{ "Login" | t }}</a>
+    {% endif %}
+{% endblock %}

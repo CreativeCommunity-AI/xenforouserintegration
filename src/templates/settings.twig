@@ -1,0 +1,35 @@
+{% extends "_layouts/cp" %}
+
+{% block content %}
+    <h1>{{ "XenForo User Integration Settings" | t }}</h1>
+
+    <form method="post" accept-charset="UTF-8">
+        {{ csrfInput() }}
+        {{ hiddenInput('action', 'plugins/save-plugin-settings') }}
+        {{ hiddenInput('pluginId', plugin.id) }}
+
+        <div class="field">
+            <label for="dbHost">{{ "Database Host" | t }}</label>
+            <input type="text" id="dbHost" name="settings[dbHost]" value="{{ settings.dbHost }}">
+        </div>
+
+        <div class="field">
+            <label for="dbName">{{ "Database Name" | t }}</label>
+            <input type="text" id="dbName" name="settings[dbName]" value="{{ settings.dbName }}">
+        </div>
+
+        <div class="field">
+            <label for="dbUsername">{{ "Database Username" | t }}</label>
+            <input type="text" id="dbUsername" name="settings[dbUsername]" value="{{ settings.dbUsername }}">
+        </div>
+
+        <div class="field">
+            <label for="dbPassword">{{ "Database Password" | t }}</label>
+            <input type="password" id="dbPassword" name="settings[dbPassword]" value="{{ settings.dbPassword }}">
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="btn submit">{{ "Save" | t }}</button>
+        </div>
+    </form>
+{% endblock %}

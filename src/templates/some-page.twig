@@ -1,0 +1,32 @@
+{% extends "_layouts/base" %}
+
+{% block content %}
+    <h1>{{ "Welcome to Some Page" | t }}</h1>
+
+    {% if currentUser %}
+        {% set userGroups = craft.app.session.get('xenforo_user_groups') %}
+
+        {% if userGroups %}
+            <p>{{ "This content is only visible to authenticated users." | t }}</p>
+            {% if '1' in userGroups %}
+                <p>{{ "Exclusive content for Group 1" | t }}</p>
+                <!-- Group 1 content here -->
+            {% endif %}
+            {% if '2' in userGroups %}
+                <p>{{ "Exclusive content for Group 2" | t }}</p>
+                <!-- Group 2 content here -->
+            {% endif %}
+        {% else %}
+            <p>{{ "You must be logged in to see exclusive content." | t }}</p>
+            <a href="{{ url('login', {redirect: craft.app.request.url}) }}">{{ "Login" | t }}</a>
+        {% endif %}
+    {% else %}
+        <p>{{ "You must be logged in to see exclusive content." | t }}</p>
+        <a href="{{ url('login', {redirect: craft.app.request.url}) }}">{{ "Login" | t }}</a>
+    {% endif %}
+
+    <div class="general-content">
+        <p>{{ "This content is visible to all users." | t }}</p>
+        <!-- General content here -->
+    </div>
+{% endblock %}

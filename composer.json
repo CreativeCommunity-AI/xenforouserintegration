@@ -1,0 +1,34 @@
+{
+  "name": "creativecommunityai/xenforouserintegration",
+  "description": "A plugin to sync XenForo userbase with Craft CMS.",
+  "type": "craft-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "CreativeCommunity-AI",
+      "email": "contact@creativecommunity.ai",
+      "homepage": "https://github.com/CreativeCommunity-AI"
+    }
+  ],
+  "require": {
+    "craftcms/cms": "^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "creativecommunityai\\xenforouserintegration\\": "src/"
+    }
+  },
+  "extra": {
+    "craft": {
+      "handle": "xenforouserintegration",
+      "version": "1.0.0",
+      "schemaVersion": "1.0.0",
+      "description": "A plugin to sync XenForo userbase with Craft CMS.",
+      "documentationUrl": "https://github.com/CreativeCommunity-AI/xenforouserintegration/blob/main/README.md",
+      "changelogUrl": "https://github.com/CreativeCommunity-AI/xenforouserintegration/blob/main/CHANGELOG.md",
+      "license": "MIT",
+      "developer": "CreativeCommunity-AI",
+      "developerUrl": "https://github.com/CreativeCommunity-AI"
+    }
+  }
+}
