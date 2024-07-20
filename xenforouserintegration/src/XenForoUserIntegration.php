@@ -19,22 +19,28 @@ class XenForoUserIntegration extends Plugin
 
     public function init()
     {
+        Craft::info('XenForoUserIntegration init method called', __METHOD__);
         parent::init();
         self::$plugin = $this;
+
+        Craft::info('XenForoUserIntegration plugin self assigned', __METHOD__);
 
         $this->setComponents([
             'xenForoService' => XenForoService::class,
         ]);
 
-        // Register the GraphQL mutations
+        Craft::info('XenForoUserIntegration components set', __METHOD__);
+
         Event::on(Gql::class, Gql::EVENT_REGISTER_GQL_MUTATIONS, function(RegisterGqlMutationsEvent $event) {
+            Craft::info('Registering GQL Mutations', __METHOD__);
             $event->mutations = array_merge($event->mutations, Mutations::getMutations());
         });
 
-        // Register controller
         Craft::$app->getUrlManager()->addRules([
             'login' => 'xenforouserintegration/auth/login',
         ], false);
+
+        Craft::info('XenForoUserIntegration initialization complete', __METHOD__);
     }
 
     protected function createSettingsModel(): ?Model
