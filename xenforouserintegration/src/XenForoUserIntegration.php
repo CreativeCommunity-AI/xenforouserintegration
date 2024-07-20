@@ -1,14 +1,14 @@
 <?php
-namespace CreativeCommunityAI\xenforouserintegration;
+namespace creativecommunityai\xenforouserintegration;
 
 use Craft;
 use craft\base\Model;
 use craft\base\Plugin;
 use craft\services\Gql;
 use craft\events\RegisterGqlMutationsEvent;
-use CreativeCommunityAI\xenforouserintegration\gql\Mutations;
-use CreativeCommunityAI\xenforouserintegration\models\Settings;
-use CreativeCommunityAI\xenforouserintegration\services\XenForoService;
+use creativecommunityai\xenforouserintegration\gql\Mutations;
+use creativecommunityai\xenforouserintegration\models\Settings;
+use creativecommunityai\xenforouserintegration\services\XenForoService;
 use yii\base\Event;
 
 class XenForoUserIntegration extends Plugin

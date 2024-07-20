@@ -1,9 +1,9 @@
 <?php
-namespace CreativeCommunityAI\xenforouserintegration\gql;
+namespace creativecommunityai\xenforouserintegration\gql;
 
 use GraphQL\Type\Definition\Type;
 use craft\gql\base\Mutation;
-use CreativeCommunityAI\xenforouserintegration\gql\resolvers\UserResolver;
+use creativecommunityai\xenforouserintegration\gql\resolvers\UserResolver;
 
 class Mutations extends Mutation
 {

@@ -1,9 +1,9 @@
 <?php
-namespace CreativeCommunityAI\reativeCommunityAI\xenforouserintegration\controllers;
+namespace creativecommunityai\reativeCommunityAI\xenforouserintegration\controllers;
 
 use Craft;
 use craft\web\Controller;
-use CreativeCommunityAI\xenforouserintegration\XenForoUserIntegration;
+use creativecommunityai\xenforouserintegration\XenForoUserIntegration;
 use yii\web\Response;
 
 class AuthController extends Controller

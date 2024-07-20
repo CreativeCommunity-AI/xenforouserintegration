@@ -1,5 +1,5 @@
 <?php
-namespace CreativeCommunityAI\xenforouserintegration\models;
+namespace creativecommunityai\xenforouserintegration\models;
 
 use craft\base\Model;
 
