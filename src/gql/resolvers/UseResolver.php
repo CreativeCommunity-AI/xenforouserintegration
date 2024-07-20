@@ -1,9 +1,9 @@
 <?php
-namespace creativecommunityai\xenforouserintegration\gql\resolvers;
+namespace CreativeCommunityAI\xenforouserintegration\gql\resolvers;
 
 use Craft;
 use craft\gql\base\Resolver;
-use creativecommunityai\xenforouserintegration\XenForoUserIntegration;
+use CreativeCommunityAI\xenforouserintegration\XenForoUserIntegration;
 use GraphQL\Type\Definition\ResolveInfo;
 
 class UserResolver extends Resolver

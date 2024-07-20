@@ -1,5 +1,5 @@
 <?php
-namespace creativecommunityai\xenforouserintegration\services;
+namespace CreativeCommunityAI\xenforouserintegration\services;
 
 use craft\base\Component;
 use yii\db\Connection;
